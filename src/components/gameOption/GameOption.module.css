@@ -10,5 +10,9 @@
 }
 
 .winner {
-  border: 2px solid #00eeff;
+  border: 2px solid #80bddb;
+}
+
+.draw {
+  border: 2px solid #fac85d;
 }
