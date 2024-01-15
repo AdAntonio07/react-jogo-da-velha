@@ -10,7 +10,7 @@ function Header() {
       <Title>Jogo da Velha</Title>
       <Subtitle>Criado por Antonio Ferreira</Subtitle>
       <div className={styles.iconContent}>
-        <Icon iconName="github" link="https://github.com/dashboard" />
+        <Icon iconName="github" link="https://github.com/AdAntonio07" />
       </div>
     </div>
   )
