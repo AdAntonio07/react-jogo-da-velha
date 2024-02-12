@@ -25,6 +25,7 @@ function Game() {
   const [vcdCircle, setvcdCircle] = useState(0)
   const [vcdX, setvcdX] = useState(0)
 
+  // Função do onClick para altera o jogador
   const handleClick = (pos) => {
     if (gameState[pos] === 0 && winner === 0) {
       let newGameState = [...gameState]
@@ -33,6 +34,7 @@ function Game() {
     }
   }
 
+  // Função que verifica o campião
   const verifyGame = () => {
     winnerTable.forEach((line) => {
       const values = line.map((pos) => gameState[pos])
@@ -45,6 +47,7 @@ function Game() {
     })
   }
 
+  // Função para resetar o jogo
   const handleReset = () => {
     setGameState(Array(9).fill(0))
     setWinner(0)
@@ -58,9 +61,11 @@ function Game() {
     }
   }
 
+  // Verificar linha vencedora
   const verifyWinnerLine = (pos) =>
     winnerLine.find((value) => value === pos) !== undefined
 
+  // Próximo a jogar
   useEffect(() => {
     setCurretPlayer(currentPlayer * -1)
     verifyGame()
